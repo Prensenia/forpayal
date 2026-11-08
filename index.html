@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0f0c1b">
+<title>For Piyu 🌸</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PIYU'S SAFE SPACE — Digital Diwali Surprise
+   Built with time, effort & care. 💜
+   ============================================================ */
+:root{
+  --bg:#0f0c1b;
+  --ink:#e8e2f5;
+  --muted:#a79fc0;
+  --violet:#a78bfa;
+  --deep-violet:#7c3aed;
+  --pink:#f0a6ca;
+  --hot-pink:#ec4899;
+  --gold:#f6c76a;
+  --glass:rgba(28,23,42,.55);
+  --glass-border:rgba(167,139,250,.22);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Poppins',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--ink);font-family:var(--sans);
+  min-height:100dvh;overflow-x:hidden;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body::selection{background:rgba(168,85,247,.5);color:#fff}
+
+/* ---------- Living background ---------- */
+.bg-fixed{position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;will-change:transform}
+.blob-1{width:70vmax;height:70vmax;left:-25vmax;top:-30vmax;background:radial-gradient(circle,rgba(124,58,237,.28),transparent 65%);animation:drift1 26s ease-in-out infinite alternate}
+.blob-2{width:60vmax;height:60vmax;right:-22vmax;bottom:-28vmax;background:radial-gradient(circle,rgba(236,72,153,.17),transparent 65%);animation:drift2 32s ease-in-out infinite alternate}
+.blob-3{width:34vmax;height:34vmax;left:55%;top:18%;background:radial-gradient(circle,rgba(246,199,106,.07),transparent 70%);animation:drift1 40s ease-in-out infinite alternate-reverse}
+@keyframes drift1{from{transform:translate(0,0) scale(1)}to{transform:translate(9vmax,7vmax) scale(1.12)}}
+@keyframes drift2{from{transform:translate(0,0) scale(1.05)}to{transform:translate(-8vmax,-9vmax) scale(.94)}}
+#sparks{position:fixed;inset:0;z-index:-2;pointer-events:none}
+.vignette{position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at 50% 30%,transparent 55%,rgba(5,3,12,.55) 100%)}
+
+/* ---------- Type helpers ---------- */
+.font-serif{font-family:var(--serif)}
+.grad-text{
+  background:linear-gradient(100deg,#c4b5fd 0%,#f0a6ca 45%,#f6c76a 80%);
+  background-size:220% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 7s ease-in-out infinite;
+}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:520px;margin:0 auto;padding:0 20px}
+.center{text-align:center}
+
+/* ---------- Lock screen ---------- */
+#lockScreen{
+  min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:24px;transition:opacity .8s ease,transform .8s ease;
+}
+#lockScreen.unlocking{opacity:0;transform:scale(1.06);pointer-events:none}
+#lockScreen.gone{display:none}
+.glass{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:28px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 24px 60px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.06);
+  position:relative;overflow:hidden;
+}
+.glass::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(160deg,rgba(255,255,255,.07) 0%,transparent 42%);
+}
+.lock-card{width:100%;max-width:360px;padding:38px 26px 30px;text-align:center}
+.lock-lotus{font-size:52px;line-height:1;display:inline-block;filter:drop-shadow(0 0 18px rgba(167,139,250,.55));animation:lotusPulse 3.2s ease-in-out infinite}
+@keyframes lotusPulse{0%,100%{transform:scale(1) rotate(-2deg);filter:drop-shadow(0 0 12px rgba(167,139,250,.45))}50%{transform:scale(1.08) rotate(2deg);filter:drop-shadow(0 0 26px rgba(240,166,202,.65))}}
+.lock-title{font-family:var(--serif);font-size:26px;font-weight:500;margin:16px 0 6px;letter-spacing:.5px}
+.lock-sub{font-size:13px;color:var(--muted);font-weight:300}
+.pw-input{
+  width:100%;margin:26px 0 14px;padding:14px 16px;text-align:center;
+  background:rgba(15,12,27,.7);border:1px solid rgba(167,139,250,.28);border-radius:14px;
+  color:#fff;font-family:var(--sans);font-size:15px;outline:none;transition:border-color .3s,box-shadow .3s;
+}
+.pw-input::placeholder{color:#6d6590;font-weight:300}
+.pw-input:focus{border-color:var(--hot-pink);box-shadow:0 0 0 3px rgba(236,72,153,.16)}
+.btn-glow{
+  width:100%;padding:14px;border:none;border-radius:14px;cursor:pointer;
+  font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:.4px;color:#fff;
+  background:linear-gradient(120deg,#7c3aed,#c026d3 55%,#ec4899);
+  background-size:180% 100%;
+  box-shadow:0 10px 30px rgba(168,85,247,.35);
+  transition:background-position .6s ease,transform .15s ease,box-shadow .3s;
+}
+.btn-glow:hover{background-position:100% 50%;box-shadow:0 12px 36px rgba(236,72,153,.4)}
+.btn-glow:active{transform:scale(.965)}
+.err{color:var(--hot-pink);font-size:12.5px;margin-top:12px;font-weight:400}
+.shake{animation:shake .45s cubic-bezier(.36,.07,.19,.97)}
+@keyframes shake{10%,90%{transform:translateX(-2px)}20%,80%{transform:translateX(4px)}30%,50%,70%{transform:translateX(-6px)}40%,60%{transform:translateX(6px)}}
+.lock-foot{margin-top:26px;font-size:11px;color:#5b5478;letter-spacing:.14em;text-transform:uppercase}
+
+/* ---------- Unlock transition ---------- */
+#main.screen-in{animation:mainIn 1s ease both}
+@keyframes mainIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.burst{position:fixed;inset:0;pointer-events:none;z-index:60}
+.burst span{position:absolute;font-size:22px;animation:burstUp 1.5s ease forwards;will-change:transform,opacity}
+@keyframes burstUp{
+  0%{opacity:0;transform:translate(var(--dx,0),var(--dy,0)) scale(.4) rotate(0)}
+  18%{opacity:1}
+  100%{opacity:0;transform:translate(var(--dx,255px),var(--dy,-320px)) scale(1.15) rotate(var(--rot,120deg))}
+}
+
+/* ---------- Hero ---------- */
+main{padding-bottom:30px;display:none}
+main.on{display:block}
+.header{padding:52px 0 10px;text-align:center;position:relative}
+.hero-title{font-family:var(--serif);font-size:clamp(30px,9vw,40px);font-weight:600;line-height:1.25;text-shadow:0 0 40px rgba(124,58,237,.35)}
+.hero-sub{margin-top:10px;font-size:12px;color:var(--muted);letter-spacing:.22em;text-transform:uppercase;font-weight:300}
+.diya-row{margin-top:20px;font-size:15px;letter-spacing:10px;color:var(--gold);text-shadow:0 0 12px rgba(246,199,106,.5)}
+.tap-hint{margin-top:8px;font-size:10.5px;color:#544d70;letter-spacing:.16em;text-transform:uppercase}
+
+/* ---------- Sections ---------- */
+section{margin-top:38px}
+.sec-label{
+  display:flex;align-items:center;gap:12px;margin:0 2px 16px;
+  font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:#8d84ad;font-weight:400;
+}
+.sec-label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(167,139,250,.35),transparent)}
+.sec-label b{font-weight:500}
+
+/* ---------- Shayari carousel ---------- */
+.sh-card{padding:34px 26px 26px;border-radius:26px}
+.sh-quote-mark{position:absolute;top:10px;left:18px;font-family:var(--serif);font-size:64px;line-height:1;color:rgba(167,139,250,.14);font-style:italic}
+.sh-slide{display:none;animation:shFade .7s ease both}
+.sh-slide.on{display:block}
+@keyframes shFade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.sh-text{font-family:var(--serif);font-style:italic;font-size:17px;line-height:2;color:#dcd4ee;text-align:center;white-space:pre-line}
+.sh-text .hi{color:var(--pink)}
+.sh-emo{text-align:center;margin-top:14px;font-size:18px;letter-spacing:6px;filter:drop-shadow(0 0 8px rgba(240,166,202,.4))}
+.sh-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+.sh-dot{width:7px;height:7px;border-radius:50%;background:rgba(167,139,250,.25);border:none;cursor:pointer;padding:0;transition:all .35s}
+.sh-dot.on{width:22px;border-radius:99px;background:linear-gradient(90deg,var(--violet),var(--hot-pink));box-shadow:0 0 10px rgba(236,72,153,.5)}
+.sh-arrows{display:flex;justify-content:space-between;margin-top:14px}
+.sh-arrow{background:none;border:1px solid rgba(167,139,250,.2);color:#9d93c4;border-radius:50%;width:38px;height:38px;cursor:pointer;font-size:15px;transition:all .3s}
+.sh-arrow:active{background:rgba(167,139,250,.14)}
+
+/* ---------- Next-page gate (Haan / Abhi nahi) ---------- */
+.gate{padding:30px 24px;border-radius:26px;text-align:center}
+.gate h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:19px;color:#f3eefe;margin-bottom:14px}
+.gate .g-note{font-size:11.5px;color:#8d84ad;font-weight:300;margin-top:14px}
+.g-btns{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.g-btn{
+  flex:1;min-width:120px;max-width:170px;padding:13px 10px;border:none;border-radius:14px;cursor:pointer;
+  font-family:var(--sans);font-size:13.5px;font-weight:500;color:#fff;
+  background:linear-gradient(120deg,#7c3aed,#ec4899);box-shadow:0 8px 26px rgba(168,85,247,.3);
+  transition:transform .15s,box-shadow .3s;
+}
+.g-btn.alt{background:linear-gradient(120deg,#3b3557,#52395e);box-shadow:0 8px 24px rgba(0,0,0,.35);color:#cfc6e6}
+.g-btn:active{transform:scale(.96)}
+.gate.chosen .g-note{opacity:.75}
+.gate.chosen .g-btn{opacity:.45;pointer-events:none}
+
+/* ---------- Polaroid photos page ---------- */
+.po-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px;align-items:start}
+.po{
+  background:#f7f2ec;padding:8px 8px 22px;border-radius:8px;
+  box-shadow:0 14px 30px rgba(0,0,0,.5);
+  transform:rotate(var(--pr,-3deg));transition:transform .45s cubic-bezier(.2,.8,.2,1);
+}
+.po:active{transform:rotate(0deg) scale(1.04)}
+.po img{width:100%;height:150px;object-fit:cover;border-radius:3px;display:block;filter:saturate(1.05)}
+.po span{display:block;margin-top:9px;font-family:var(--serif);font-style:italic;font-size:12.5px;color:#5f566e;text-align:center}
+.ph-shayari{
+  grid-column:span 2;
+  padding:28px 22px;border-radius:20px;text-align:center;
+  background:
+    linear-gradient(rgba(28,23,42,.78),rgba(28,23,42,.78)) padding-box,
+    linear-gradient(140deg,rgba(167,139,250,.55),rgba(236,72,153,.65)) border-box;
+  border:1px solid transparent;
+  margin:2px 0;
+}
+.ph-shayari .sh-text{font-size:15.5px;line-height:1.9;white-space:normal}
+.ph-shayari .sh-emo{margin-top:12px;font-size:16px}
+
+/* ---------- Dare cards ---------- */
+.p-sub{font-size:12.5px;color:var(--muted);font-weight:300;text-align:center;margin:-4px 0 18px}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.dcard{perspective:900px;height:150px;cursor:pointer}
+.dcard-in{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,.2,.2,1)}
+.dcard.flip .dcard-in{transform:rotateY(180deg)}
+.dface{
+  position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px;
+}
+.dback{
+  background:linear-gradient(160deg,rgba(124,58,237,.4),rgba(236,72,153,.28));
+  border:1px solid var(--glass-border);font-size:30px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+.dback small{font-size:9px;letter-spacing:.2em;color:#cbbfeb;margin-top:8px;text-transform:uppercase}
+.dfront{
+  transform:rotateY(180deg);
+  background:rgba(24,19,36,.95);border:1px solid rgba(240,166,202,.45);
+  font-size:11.5px;line-height:1.55;color:#e5dffa;font-weight:300;
+}
+.dfront .d-type{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#a78bfa;margin-top:8px}
+.dbtns{display:flex;gap:7px;margin-top:10px;justify-content:center;flex-wrap:wrap}
+.dbtn{
+  background:linear-gradient(120deg,#7c3aed,#ec4899);border:none;color:#fff;
+  font-size:10px;padding:7px 11px;border-radius:99px;cursor:pointer;font-family:var(--sans);font-weight:400;
+}
+.dbtn.no{background:rgba(120,110,150,.4)}
+.dstatus{
+  margin-top:20px;min-height:20px;text-align:center;
+  font-family:var(--serif);font-style:italic;font-size:15px;color:var(--pink);
+  text-shadow:0 0 16px rgba(240,166,202,.35);line-height:1.8;
+}
+
+/* ---------- Finale ---------- */
+#finale{
+  position:fixed;inset:0;z-index:90;display:none;
+  background:radial-gradient(ellipse at 50% 80%,rgba(23,12,40,.92),rgba(6,4,14,.97));
+  align-items:center;justify-content:center;text-align:center;padding:30px;
+}
+#finale.on{display:flex;animation:lbIn .5s ease}
+.fn-msg{opacity:0;transform:translateY(18px);transition:opacity 1.2s ease,transform 1.2s ease}
+#finale.on .fn-msg{opacity:1;transform:none;transition-delay:1.6s}
+.fn-msg h2{
+  font-family:var(--serif);font-size:clamp(30px,9vw,42px);font-weight:600;
+  background:linear-gradient(100deg,#c4b5fd,#f0a6ca 45%,#f6c76a 85%);
+  background-size:220% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 6s ease-in-out infinite;
+}
+.fn-msg p{margin-top:18px;font-size:14px;color:#cfc6e6;font-weight:300;line-height:2}
+.fn-msg .fn-end{margin-top:26px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#7d74a0}
+
+/* ---------- Gallery ---------- */
+.g-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.g-item{
+  position:relative;height:190px;border-radius:20px;overflow:hidden;cursor:pointer;
+  background:linear-gradient(150deg,rgba(124,58,237,.22),rgba(236,72,153,.14));
+  border:1px solid var(--glass-border);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;
+}
+.g-item:active{transform:scale(.97)}
+.g-item img,.g-item video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+@media(hover:hover){.g-item:hover img{transform:scale(1.07)}.g-item:hover{box-shadow:0 14px 40px rgba(124,58,237,.3);border-color:rgba(240,166,202,.5)}}
+.g-wide{grid-column:span 2}
+.g-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px;text-align:center}
+.g-ph .ic{font-size:30px;filter:grayscale(.2);opacity:.9}
+.g-ph .tx{font-size:11px;color:#a99fd0;font-weight:300;letter-spacing:.05em;line-height:1.5}
+.g-tag{position:absolute;left:10px;bottom:10px;z-index:2;font-size:10px;color:#fff;letter-spacing:.08em;text-transform:uppercase;background:rgba(10,8,20,.55);backdrop-filter:blur(8px);padding:5px 11px;border-radius:99px;border:1px solid rgba(255,255,255,.12)}
+
+/* ---------- Lightbox ---------- */
+#lightbox{position:fixed;inset:0;z-index:80;display:none;align-items:center;justify-content:center;background:rgba(6,4,14,.92);backdrop-filter:blur(14px);padding:18px;animation:lbIn .3s ease}
+#lightbox.on{display:flex}
+@keyframes lbIn{from{opacity:0}to{opacity:1}}
+#lb-media{max-width:100%;max-height:78dvh;border-radius:16px;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+#lb-media img,#lb-media video{max-width:100%;max-height:78dvh;border-radius:16px}
+#lb-cap{margin-top:14px;text-align:center;font-family:var(--serif);font-style:italic;color:#cfc6e6;font-size:15px}
+#lb-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#fff;font-size:16px;cursor:pointer}
+
+/* ---------- Timeline ---------- */
+.tl{position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:1px;background:linear-gradient(180deg,rgba(167,139,250,.5),rgba(236,72,153,.4),transparent)}
+.tl-item{position:relative;padding:0 0 22px 12px;animation:shFade .8s ease both}
+.tl-item::before{content:"";position:absolute;left:-22px;top:8px;width:11px;height:11px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--hot-pink));box-shadow:0 0 12px rgba(167,139,250,.7)}
+.tl-ic{font-size:20px}
+.tl-item h4{font-family:var(--serif);font-weight:500;font-size:16.5px;margin:6px 0 3px;color:#f3eefe;letter-spacing:.02em}
+.tl-item p{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7}
+
+/* ---------- Final letter ---------- */
+.letter{padding:34px 28px;border-radius:26px;text-align:center}
+.letter p{font-family:var(--serif);font-style:italic;font-size:16.5px;line-height:2.1;color:#d9d0ec}
+.letter .sign{margin-top:22px;color:var(--pink);font-size:14px;font-family:var(--sans);font-style:normal;letter-spacing:.06em;font-weight:500}
+
+/* ---------- Final long-term promise ---------- */
+.final-surprise{margin-top:52px}
+.promise{
+  padding:36px 26px;border-radius:26px;text-align:center;
+  border:1px solid transparent;
+  background:
+    linear-gradient(rgba(28,23,42,.75),rgba(28,23,42,.75)) padding-box,
+    linear-gradient(140deg,rgba(167,139,250,.55),rgba(246,199,106,.35) 55%,rgba(236,72,153,.6)) border-box;
+  box-shadow:0 18px 50px rgba(124,58,237,.22),inset 0 1px 0 rgba(255,255,255,.07);
+}
+.pr-tag{font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.pr-line{
+  font-family:var(--serif);font-style:italic;font-size:18.5px;line-height:2;
+  color:#f4eefc;margin:0 0 18px;
+  text-shadow:0 0 24px rgba(167,139,250,.35);
+}
+.pr-soft{font-size:12.5px;color:var(--muted);font-weight:300;line-height:1.9;margin-top:18px}
+.pr-sign{margin-top:20px;color:var(--pink);font-size:13.5px;letter-spacing:.06em;font-weight:500}
+
+/* ---------- Kand easter egg ---------- */
+.kand{text-align:center;margin-top:46px;padding:30px 20px 140px}
+.kand-warn{font-size:11px;color:#5b5478;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px}
+.kand-btn{display:inline-flex;align-items:center;gap:9px;background:rgba(28,23,42,.7);border:1px solid rgba(167,139,250,.25);color:#b3a8d6;padding:12px 24px;border-radius:99px;font-size:13.5px;cursor:pointer;font-family:var(--sans);transition:all .3s;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.kand-btn:active{transform:scale(.96);background:rgba(124,58,237,.2)}
+.kand-btn:hover{border-color:rgba(240,166,202,.5);color:#fff}
+#rocket{position:fixed;left:50%;top:-70px;z-index:70;font-size:42px;pointer-events:none;transform:translateX(-50%) rotate(180deg);opacity:0}
+#rocket.fly{animation:rocketDive 1.6s cubic-bezier(.55,.06,.68,.19) forwards}
+@keyframes rocketDive{
+  0%{opacity:0;transform:translateX(-50%) translateY(0) rotate(180deg) scale(1)}
+  12%{opacity:1}
+  88%{opacity:1}
+  100%{opacity:.9;transform:translateX(-50%) translateY(calc(78dvh)) rotate(178deg) scale(1.35)}
+}
+#boom{position:fixed;z-index:71;pointer-events:none;font-size:16px;will-change:transform,opacity}
+#boom.f{animation:boomF .9s ease forwards}
+@keyframes boomF{from{opacity:1;transform:translate(0,0) scale(.6)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(2)}}
+.shake-screen{animation:scShake .55s ease}
+@keyframes scShake{0%,100%{transform:none}20%{transform:translate(4px,-3px)}40%{transform:translate(-5px,4px)}60%{transform:translate(4px,3px)}80%{transform:translate(-3px,-2px)}}
+#kand-msg{display:none;margin-top:26px;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--pink);text-shadow:0 0 18px rgba(240,166,202,.4);animation:shFade .7s ease both}
+#kand-msg.on{display:block}
+
+/* ---------- Footer ---------- */
+.foot{margin-top:44px;text-align:center;padding-bottom:26px}
+.foot .heart{font-size:13px;letter-spacing:8px;color:#8d84ad}
+.foot .mk{margin-top:8px;font-size:10.5px;color:#4d4670;letter-spacing:.18em;text-transform:uppercase}
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Falling diyas + rose petals ---------- */
+#diyaRain{position:fixed;inset:0;z-index:65;pointer-events:none;opacity:0;transition:opacity 1s}
+#diyaRain.on{opacity:1}
+#diyaRain span{position:absolute;top:-8%;font-size:14px;animation:fall linear forwards}
+@keyframes fall{to{transform:translate(var(--drift,0),112dvh) rotate(var(--spin,60deg));opacity:.15}}
+#petals{position:fixed;inset:0;z-index:64;pointer-events:none;overflow:hidden}
+#petals span{
+  position:absolute;top:-7%;
+  animation:petalFall var(--dur,14s) linear infinite;
+  animation-delay:var(--del,0s);
+  filter:drop-shadow(0 2px 5px rgba(10,6,25,.35));
+  opacity:0;
+}
+@keyframes petalFall{
+  0%{transform:translate(0,-9vh) rotate(0deg);opacity:0}
+  7%{opacity:.85}
+  88%{opacity:.65}
+  100%{transform:translate(var(--sway,4vw),112vh) rotate(var(--spin,300deg));opacity:0}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;transition-duration:.001s!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ambient background -->
+<div class="bg-fixed" aria-hidden="true">
+  <div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div>
+</div>
+<canvas id="sparks" aria-hidden="true"></canvas>
+<div class="vignette" aria-hidden="true"></div>
+<div id="diyaRain" aria-hidden="true"></div>
+<div id="petals" aria-hidden="true"></div>
+
+<!-- ============ LOCK SCREEN ============ -->
+<div id="lockScreen">
+  <div class="glass lock-card">
+    <span class="lock-lotus">🪷</span>
+    <h1 class="lock-title">A Digital Safe Space</h1>
+    <p class="lock-sub">Crafted with time, effort and care.<br>Only one person can open this.</p>
+    <input class="pw-input" id="pw" type="password" autocomplete="off" spellcheck="false" placeholder="Hint: Meri ________ ji 🌸">
+    <button class="btn-glow" id="unlockBtn" onclick="tryUnlock()">Unlock Surprise</button>
+    <p class="err" id="err"></p>
+    <p class="lock-foot">Diwali × Dil-wali · 2026</p>
+  </div>
+</div>
+
+<!-- ============ MAIN ============ -->
+<main id="main">
+  <div class="wrap">
+
+    <!-- hero -->
+    <header class="header">
+      <h1 class="hero-title grad-text">Happy Diwali,<br>Piyu ✨</h1>
+      <p class="hero-sub">your safe space · unlocked</p>
+      <div class="diya-row" aria-hidden="true">🪔 ✨ 🪔</div>
+      <p class="tap-hint">tap the title for a little magic</p>
+    </header>
+
+    <!-- shayari -->
+    <section class="reveal">
+      <div class="sec-label"><b>Shayari</b><span style="letter-spacing:.2em">Archive</span></div>
+      <div class="glass sh-card" id="shCard">
+        <span class="sh-quote-mark">&ldquo;</span>
+        <div id="shSlides"></div>
+        <div class="sh-nav" id="shDots"></div>
+        <div class="sh-arrows">
+          <button class="sh-arrow" onclick="shGo(-1)" aria-label="Previous">‹</button>
+          <button class="sh-arrow" onclick="shGo(1)" aria-label="Next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- masti sawaal gate -->
+    <section class="reveal">
+      <div class="sec-label"><b>Ek Chhota</b>  Sawaal 😏</div>
+      <div class="glass gate" id="gateBox">
+        <h3>Toh Piyu… shayari padhi ab —<br>mere liye thoda sa pyar jaga? 😉</h3>
+        <div class="g-btns">
+          <button class="g-btn" id="gateYes" onclick="chooseGate('yes')">Haan 💜</button>
+          <button class="g-btn alt" id="gateNo" onclick="chooseGate('no')">Hmm… abhi nahi 🙈</button>
+        </div>
+        <p class="g-note">dono jawab hi sahi hain — zero pressure 🫶</p>
+      </div>
+    </section>
+
+    <!-- YES page: photos surrounding unique shayari -->
+    <section class="reveal" id="photosPage" hidden>
+      <div class="sec-label"><b>Purple Night</b>  Collection 💜</div>
+      <div class="po-wrap">
+        <div class="po" style="--pr:-3deg"><img src="media/piyu-2.jpeg" alt=""><span>Bangles ✨</span></div>
+        <div class="po" style="--pr:2.5deg"><img src="media/piyu-3.jpeg" alt=""><span>That Glow 😉</span></div>
+        <div class="glass ph-shayari">
+          <p class="sh-text">
+            "3 tasveerein thi, par har ek mein Diwali ka naya angle,<br>
+            bangles ki chhan-chhan aur smile ekdum simple si…<br>
+            Us raat poora aangan roshan ho gaya tha,<br>
+            kyunki <span class="hi">bina filter wali saadgi</span> hi asli chamak hoti hai."
+          </p>
+          <p class="sh-emo">🪷 💜</p>
+        </div>
+        <div class="po" style="--pr:-2deg"><img src="media/her-standing-purple.jpeg" alt=""><span>Purple Night 🌙</span></div>
+        <div class="po" style="--pr:3deg"><img src="media/her-laugh-violet.jpeg" alt=""><span>That Smile 🥰</span></div>
+      </div>
+    </section>
+
+    <!-- NO page: alag gentle shayari, no photos -->
+    <section class="reveal" id="noPage" hidden>
+      <div class="sec-label"><b>Abhi Ka</b>  Jawab 🪷</div>
+      <div class="glass letter">
+        <p>"Kuch phool apne aap khilte hain — bina kisi sawaal ke,<br>
+        kuch jawab dair se aate hain — unme hi zyada sukoon hota hai…<br>
+        Abhi nahi bolo ya haan — dono Dil-wali hi hain,<br>
+        kyunki jo sach Dil mein hai, wo jaldi ghabrata nahi."</p>
+        <p class="pr-soft" style="margin-top:16px">Respect full ✅ — jab feel ho tab. Aur haan…<br>photos tab bhi yahin hongi — koi bhaag-daud nahi 🫶</p>
+      </div>
+    </section>
+
+    <!-- little surprise hook -->
+    <section class="reveal center" id="surpriseSec" hidden style="margin:0">
+      <button class="kand-btn" id="surpriseBtn" onclick="enterDares()">Here a little surprise — click it 👀</button>
+      <p class="kand-warn" style="margin-top:12px">shararat awaits 🤭</p>
+    </section>
+
+    <!-- dare cards -->
+    <section class="reveal" id="daresPage" hidden>
+      <div class="sec-label"><b>The Dare</b>  Draw 🎲</div>
+      <p class="p-sub">6 cards — 2 real dares chhupe hue hain, baaki playful.<br>Jisko kya mila, pehle se kisi ko nahi pata. Flip karo 🤭</p>
+      <div class="dgrid" id="dgrid"></div>
+      <p class="dstatus" id="dare-status"></p>
+      <div class="center" style="margin-top:30px">
+        <button class="kand-btn" id="theEndBtn" onclick="theEnd()">The End 🎆</button>
+        <p class="kand-warn" style="margin-top:10px">pehle ek card kholo… phir end 😜</p>
+      </div>
+    </section>
+
+    <!-- memories -->
+    <section class="reveal">
+      <div class="sec-label"><b>Diwali '26</b> Memories</div>
+      <div class="g-grid" id="gallery"></div>
+    </section>
+
+    <!-- video -->
+    <section class="reveal" id="videoSec" hidden>
+      <div class="sec-label"><b>One Small</b> Video 🎬</div>
+      <div class="g-item g-wide" style="height:auto">
+        <video id="heroVideo" style="border-radius:20px" controls playsinline preload="metadata"></video>
+      </div>
+    </section>
+
+    <!-- timeline -->
+    <section class="reveal">
+      <div class="sec-label"><b>The Story</b> So Far</div>
+      <div class="tl">
+        <div class="tl-item">
+          <span class="tl-ic">🪷</span>
+          <h4>Meri Lakshmi Ji</h4>
+          <p>Ek pink kamal, ek chhoti si koshish... aur tumhari "Awwww thnkuuu 🌸" ke saath ek reel jo poori kahaan bata gayi — <i>Not every Mahalakshmi lives in a temple.</i></p>
+        </div>
+        <div class="tl-item" style="animation-delay:.12s">
+          <span class="tl-ic">💜</span>
+          <h4>The Violet Outfit</h4>
+          <p>Bangles, bindi aur wo baingani saadgi. Teen tasveerein jo tumne bina maange bheji — bina filter, poori grace.</p>
+        </div>
+        <div class="tl-item" style="animation-delay:.24s">
+          <span class="tl-ic">🎶</span>
+          <h4>Dil-wali Diwali</h4>
+          <p><i>"Is baar toh Diwali aur Dil-wali dono hai !!"</i> — aur us reel ne poori raat roshan kar di.</p>
+        </div>
+        <div class="tl-item" style="animation-delay:.36s">
+          <span class="tl-ic">💫</span>
+          <h4>Safe Space, Daily</h4>
+          <p>Jahan tumhari har ankahee baat ko time milta hai. Ye jagah, tumhare liye. Aaj bhi, kal bhi.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- final letter -->
+    <section class="reveal">
+      <div class="glass letter">
+        <p>Kuch cheezein banane mein time lagta hai —<br>
+        kyunki wo special logon ke liye hoti hain…</p>
+        <p style="margin-top:14px">Roshni bahut thi aaj ke din,<br>
+        par kuch diye sirf tumhare naam ke hain.</p>
+        <p class="sign">Goodnight &amp; Sweet Dreams 🌸</p>
+      </div>
+    </section>
+
+    <!-- THE last surprise — long-term, sabse chhota but sabse bada -->
+    <section class="reveal final-surprise">
+      <div class="sec-label"><b>The Last</b> Thing</div>
+      <div class="glass promise">
+        <p class="pr-tag">Ek chhoti si baat · no filter 🫍</p>
+        <p class="pr-line">&ldquo;Main long term ke liye aaya hoon.<br>Short term mujhe bilkul pasand nahi.&rdquo;</p>
+        <p class="pr-line">&ldquo;Tumhare emotions mere liye sabse badi amanat hain —<br>aur main amanat ka poora khayal rakhta hoon.&rdquo;</p>
+        <p class="pr-soft">No rush. No pressure. Jab tak tum comfortable na ho, sab waise ka waisa.<br>
+        Main kahin nahi jaa raha — aise hi, yahin rukne ka mann hai 🪷</p>
+        <p class="pr-sign">— Tumhara Safe Space 💜</p>
+      </div>
+    </section>
+
+    <!-- kand easter egg -->
+    <section class="kand reveal">
+      <p class="kand-warn">warning: do not click this button</p>
+      <button class="kand-btn" id="kandBtn" onclick="triggerKand()">Launch Sky Shot 🧨</button>
+      <p id="kand-msg">"Sky shot ko ulta rakh ke fod diya" 🤣🤣</p>
+    </section>
+
+  </div>
+
+  <footer class="foot">
+    <p class="heart">🪷&nbsp;✨&nbsp;🪷</p>
+    <p class="mk">made with effort · only for p</p>
+  </footer>
+</main>
+
+<!-- rocket + boom layers -->
+<div id="rocket" aria-hidden="true">🚀</div>
+
+<!-- finale -->
+<div id="finale" aria-hidden="true">
+  <div class="fn-msg">
+    <h2>Happy Diwali, Piyu 🪷</h2>
+    <p>The End — par Dil-wali wali story<br>toh sirf shuru hui hai 💜</p>
+    <p class="fn-end">tap anywhere to close ✨</p>
+  </div>
+</div>
+
+<!-- lightbox -->
+<div id="lightbox" onclick="closeLB(event)">
+  <button id="lb-close" onclick="closeLB(event,true)">✕</button>
+  <div style="display:flex;flex-direction:column;align-items:center">
+    <div id="lb-media"></div>
+    <p id="lb-cap"></p>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   SETUP — CHANGE THESE ONLY  🌸
+   Put your photos / videos / voice note in the same folder as this file
+   (or images/ subfolder) and just update the filenames below.
+   ===================================================================== */
+const CONFIG = {
+  // accepted unlock answers (lowercase matching)
+  passwords: ["mahalakshmi","mahalaxmi","lakshmi","laxmi","dil-wali","dilwali","dil wali"],
+  gagMsgs: [
+    "Naah, galat hai. Try again! 😏",
+    "Sochi thi padhoge, bolo 😄",
+    "Hint wala phir se yaad karo… 🪷",
+    "Mahalakshmi… dil-wali… koi bhi ek 💜"
+  ],
+  // gallery items — mujhe unki Diwali '26 photos (media/ folder)
+  gallery: [
+    { type:"image", src:"media/piyu-2.jpeg",              tag:"Bangles ✨ 01",    ph:["💜","Photo missing"] },
+    { type:"image", src:"media/piyu-3.jpeg",              tag:"Bangles ✨ 02",    ph:["💜","Photo missing"] },
+    { type:"image", src:"media/her-standing-purple.jpeg", tag:"Violet Night",     ph:["🌸","Photo missing"] },
+    { type:"image", src:"media/her-laugh-violet.jpeg",    tag:"That Smile",       ph:["🥰","Photo missing"] },
+    { type:"image", src:"media/rangoli-diya.jpeg",        tag:"Choora × Rangoli", ph:["🪔","Photo missing"] },
+    { type:"image", src:"media/piyu-5.jpeg",              tag:"Soft Light",       ph:["✨","Photo missing"], wide:true }
+  ],
+  video: { src:"media/piyu-video-1.mp4", tag:"Diwali '26 — Us" },      // unki video
+  voiceNote: null   // e.g. { src:"images/voice.mp3", tag:"Her Voice" }
+};
+
+/* shayari slides (Hinglish) — 3 light slides */
+const SHAYARIS = [
+  { emo:"✨ ❤️", t:
+"Ye diye, ye patakhe, ye roshni toh bas aaj raat ke liye hain,\n"+
+"Par main tumhare chehre ka ye sukoon har din dekhna chahta hoon…\n"+
+"Tumhare har ankahe darr ko peeche chhodkar, tumhari har muskaan ka,\n"+
+"Sach bataun… toh main tumhara wo hamesha wala <span class='hi'>'Safe Space'</span> banna chahta hoon." },
+  { emo:"🎆 💖", t:
+"Aaj aasmaan mein bhale hi kitne bhi patakhe goonj rahe hon,\n"+
+"Par asli sukoon toh mujhe tumhari in baaton mein hi milta hai…\n"+
+"Dua hai ki agli Diwali ki roshni hum saath baithkar dekhein,\n"+
+"Kyunki sach kahun, toh tumhare bina ab ye tyohaar bhi thoda adhoora sa lagta hai." },
+  { emo:"🥰 ✨", t:
+"Maine toh bas aise hi kaha tha ki is baar Diwali aur 'Dil-wali' dono hain,\n"+
+"Par tumhari un 3 tasveeron ne mere us mazaak ko sach hi saabit kar diya…\n"+
+"Roshni toh bahar shehar mein bahut thi aaj ke din,\n"+
+"Par mere dil ko toh tumhari bas us ek <span class='hi'>jhalak</span> ne hi roshan kar diya." }
+];
+
+/* extra fun messages on wrong attempts count */
+let attempts = 0;
+function tryUnlock(){
+  const v = document.getElementById("pw").value.toLowerCase().trim();
+  if (CONFIG.passwords.some(p => v.includes(p))){
+    unlock();
+  } else {
+    attempts++;
+    const err = document.getElementById("err");
+    err.textContent = CONFIG.gagMsgs[Math.min(attempts - 1, CONFIG.gagMsgs.length - 1)];
+    const card = document.querySelector(".lock-card");
+    card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake");
+    if (attempts >= 5) err.textContent = "Okay okay, ab emoji 🪷 par tap karo if he told you something 😉";
+  }
+}
+document.getElementById("pw").addEventListener("keydown", e => { if (e.key === "Enter") tryUnlock(); });
+
+/* unlock sequence */
+let unlocked = false;
+function unlock(){
+  if (unlocked) return; unlocked = true;
+  emojiBurst();
+  const ls = document.getElementById("lockScreen");
+  ls.classList.add("unlocking");
+  setTimeout(() => {
+    ls.classList.add("gone");
+    const m = document.getElementById("main");
+    m.style.display = "block"; m.classList.add("on","screen-in");
+    diyaRain();
+    rosePetalRain();
+    initReveal();
+    window.scrollTo(0,0);
+  }, 750);
+}
+
+/* emoji burst from center-bottom */
+function emojiBurst(){
+  const layer = document.createElement("div");
+  layer.className = "burst"; document.body.appendChild(layer);
+  const set = ["🪷","💜","✨","🌸","🪔","🎆"];
+  for (let i = 0; i < 26; i++){
+    const s = document.createElement("span");
+    s.textContent = set[i % set.length];
+    s.style.left = (45 + (Math.random()*10) - 5) + "vw";
+    s.style.top = "70vh";
+    s.style.setProperty("--dx", ((Math.random()*2-1) * 240) + "px");
+    s.style.setProperty("--rot", (Math.random()*240 - 120) + "deg");
+    s.style.animationDelay = (Math.random() * .35) + "s";
+    s.style.fontSize = (14 + Math.random()*20) + "px";
+    layer.appendChild(s);
+  }
+  setTimeout(() => layer.remove(), 2400);
+}
+
+/* gentle falling sparkle rain for a few seconds */
+function diyaRain(){
+  const rain = document.getElementById("diyaRain");
+  rain.innerHTML = ""; rain.classList.add("on");
+  const set = ["✨","🌸","✧","🪔"];
+  for (let i = 0; i < 34; i++){
+    const s = document.createElement("span");
+    s.textContent = set[i % set.length];
+    s.style.left = Math.random()*100 + "vw";
+    s.style.setProperty("--drift", (Math.random()*10 - 5) + "vw");
+    s.style.setProperty("--spin", (Math.random()*360 - 180) + "deg");
+    s.style.animationDuration = (3 + Math.random()*3) + "s";
+    s.style.animationDelay = (Math.random()*1.8) + "s";
+    s.style.fontSize = (9 + Math.random()*10) + "px";
+    rain.appendChild(s);
+  }
+  setTimeout(() => rain.classList.remove("on"), 6500);
+  setTimeout(() => rain.innerHTML = "", 9000);
+}
+
+/* continuous soft rose petal drift 🌹 */
+function rosePetalRain(){
+  const box = document.getElementById("petals");
+  if (box.hasChildNodes()) return;
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const set = ["🌹","🌸","🌹","🌺","🌹","🌸"];
+  for (let i = 0; i < 13; i++){
+    const s = document.createElement("span");
+    s.textContent = set[i % set.length];
+    s.style.left = (Math.random()*100) + "vw";
+    s.style.setProperty("--sway", ((Math.random()*2-1)*9) + "vw");
+    s.style.setProperty("--spin", (200 + Math.random()*400) + "deg");
+    s.style.setProperty("--dur", (13 + Math.random()*9) + "s");
+    s.style.setProperty("--del", (Math.random()*12) + "s");
+    s.style.fontSize = (11 + Math.random()*9) + "px";
+    box.appendChild(s);
+  }
+}
+
+/* scroll reveal */
+function initReveal(){
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .12, rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+}
+
+/* ---------- Shayari carousel ---------- */
+const shSlides = document.getElementById("shSlides");
+const shDotsBox = document.getElementById("shDots");
+SHAYARIS.forEach((s, i) => {
+  const d = document.createElement("div");
+  d.className = "sh-slide" + (i === 0 ? " on" : "");
+  d.innerHTML = `<p class="sh-text">${s.t}</p><p class="sh-emo">${s.emo}</p>`;
+  shSlides.appendChild(d);
+  const dot = document.createElement("button");
+  dot.className = "sh-dot" + (i === 0 ? " on" : "");
+  dot.setAttribute("aria-label", "Shayari " + (i+1));
+  dot.onclick = () => shSet(i);
+  shDotsBox.appendChild(dot);
+});
+let shI = 0, shTimer = null;
+function shSet(i){
+  shI = (i + SHAYARIS.length) % SHAYARIS.length;
+  [...shSlides.children].forEach((el, k) => el.classList.toggle("on", k === shI));
+  [...shDotsBox.children].forEach((el, k) => el.classList.toggle("on", k === shI));
+  restartAuto();
+}
+function shGo(dir){ shSet(shI + dir); }
+function restartAuto(){
+  clearInterval(shTimer);
+  shTimer = setInterval(() => { if (!document.hidden) shGo(1); }, 7000);
+}
+restartAuto();
+/* swipe */
+let swX = null;
+shCard = document.getElementById("shCard");
+shCard.addEventListener("touchstart", e => swX = e.touches[0].clientX, {passive:true});
+shCard.addEventListener("touchend", e => {
+  if (swX === null) return;
+  const dx = e.changedTouches[0].clientX - swX;
+  if (Math.abs(dx) > 44) shGo(dx < 0 ? 1 : -1);
+  swX = null;
+}, {passive:true});
+
+/* ---------- Gallery ---------- */
+const gal = document.getElementById("gallery");
+CONFIG.gallery.forEach(item => {
+  const d = document.createElement("div");
+  d.className = "g-item";
+  const im = document.createElement("img");
+  im.src = item.src; im.alt = item.tag; im.loading = "lazy";
+  im.onerror = () => {
+    im.remove();
+    const ph = document.createElement("div");
+    ph.className = "g-ph";
+    ph.innerHTML = `<span class="ic">${item.ph[0]}</span><span class="tx">${item.ph[1]}</span>`;
+    d.appendChild(ph);
+  };
+  d.appendChild(im);
+  const tag = document.createElement("span"); tag.className = "g-tag"; tag.textContent = item.tag;
+  d.appendChild(tag);
+  d.onclick = () => openLB(item);
+  gal.appendChild(d);
+});
+if (CONFIG.video){
+  document.getElementById("videoSec").hidden = false;
+  const v = document.getElementById("heroVideo");
+  v.src = CONFIG.video.src; v.poster = ""; v.style.width = "100%"; v.style.height = "auto";
+} else {
+  /* still show a video slot placeholder so it's discoverable */
+  const d = document.createElement("div"); d.className = "g-item g-wide";
+  d.innerHTML = `<div class="g-ph"><span class="ic">🎬</span><span class="tx">[Video slot — videos/ me file daalein, CONFIG.video me naam update karein]</span></div><span class="g-tag">Video</span>`;
+  gal.appendChild(d);
+}
+if (CONFIG.voiceNote){
+  const sec = document.createElement("section");
+  sec.className = "reveal";
+  sec.innerHTML = `<div class="sec-label"><b>Her Voice</b> 🎤</div>
+    <div class="glass" style="padding:20px;border-radius:20px">
+      <audio controls style="width:100%" src="${CONFIG.voiceNote.src}"></audio>
+      <p style="font-size:11.5px;color:var(--muted);margin-top:8px;text-align:center;font-weight:300">${CONFIG.voiceNote.tag}</p>
+    </div>`;
+  document.getElementById("main").querySelector(".wrap").insertBefore(sec, document.querySelector(".kand"));
+  io2 = sec;
+}
+
+/* lightbox */
+function openLB(item){
+  const lb = document.getElementById("lightbox"), md = document.getElementById("lb-media");
+  md.innerHTML = "";
+  if (item.type === "video"){
+    const v = document.createElement("video"); v.src = item.src; v.controls = true; v.playsInline = true; v.autoplay = true;
+    md.appendChild(v);
+  } else {
+    const i = document.createElement("img"); i.src = item.src; i.alt = item.tag;
+    md.appendChild(i);
+  }
+  document.getElementById("lb-cap").textContent = item.tag;
+  lb.classList.add("on"); document.body.style.overflow = "hidden";
+}
+function closeLB(e, force){
+  if (force || e.target.id === "lightbox" || e.target.closest("#lb-close")){
+    const lb = document.getElementById("lightbox");
+    lb.classList.remove("on"); document.body.style.overflow = "";
+    lb.querySelector("video")?.pause();
+  }
+}
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeLB({target:{id:"lightbox"}}, true); });
+
+/* ---------- tap magic on hero title ---------- */
+const hero = document.querySelector(".hero-title");
+let lastTap = 0;
+hero.addEventListener("click", () => {
+  emojiBurst();
+  const now = Date.now();
+  if (now - lastTap < 450){ /* double tap: extra rain */ diyaRain(); }
+  lastTap = now;
+});
+
+/* ---------- THE KAND 🧨 ---------- */
+function triggerKand(){
+  const btn = document.getElementById("kandBtn");
+  btn.disabled = true; btn.style.opacity = .5;
+  const r = document.getElementById("rocket");
+  r.classList.remove("fly"); void r.offsetWidth; r.classList.add("fly");
+  setTimeout(() => {
+    boomAt(window.innerWidth/2, window.innerHeight * .82);
+    document.body.classList.add("shake-screen");
+    setTimeout(() => document.body.classList.remove("shake-screen"), 600);
+  }, 1550);
+  setTimeout(() => {
+    document.getElementById("kand-msg").classList.add("on");
+    btn.disabled = false; btn.style.opacity = 1;
+    emojiBurst();
+  }, 2250);
+}
+function boomAt(x, y){
+  const board = document.createElement("div");
+  board.style.cssText = "position:fixed;inset:0;z-index:71;pointer-events:none";
+  const set = ["💥","🎆","✨","🧨","💜","⭐️"];
+  for (let i = 0; i < 30; i++){
+    const s = document.createElement("span");
+    s.id = "boom"; s.className = "f";
+    s.textContent = set[i % set.length];
+    s.style.left = x + "px"; s.style.top = y + "px";
+    const a = Math.random() * Math.PI * 2, dist = 60 + Math.random()*180;
+    s.style.setProperty("--dx", Math.cos(a) * dist + "px");
+    s.style.setProperty("--dy", Math.sin(a) * dist + "px");
+    s.style.animationDelay = (Math.random()*0.12) + "s";
+    s.style.fontSize = (13 + Math.random()*15) + "px";
+    board.appendChild(s);
+  }
+  document.body.appendChild(board);
+  setTimeout(() => board.remove(), 1400);
+}
+/* cheeky: prompt on long-press lock title? no. keep clean. */
+
+/* ---------- Gate: Haan / Abhi nahi ---------- */
+function chooseGate(choice){
+  const box = document.getElementById("gateBox");
+  box.classList.add("chosen");
+  document.getElementById("gateYes").disabled = true;
+  document.getElementById("gateNo").disabled = true;
+  const page = document.getElementById(choice === "yes" ? "photosPage" : "noPage");
+  page.hidden = false;
+  setTimeout(() => page.scrollIntoView({ behavior: "smooth", block: "center" }), 120);
+  setTimeout(() => {
+    const s = document.getElementById("surpriseSec");
+    s.hidden = false;
+    emojiBurst();
+  }, 1400);
+}
+
+/* ---------- Dare cards ---------- */
+const DARES = [
+  { type:"dare", emoji:"💜", text:"Kamar pe heart 💜 wala trend — ek chhota video, jo duniya kisi aur ko nahi dikhegi 🤭" },
+  { type:"dare", emoji:"📹", text:"Ek video — jo sirf MERE liye banegi 👀 (10 sec bhi chalega, bas cute wali 😌)" },
+  { type:"playful", emoji:"🤳", text:"Chashme wali selfie 👓 — bina filter, classic Piyu style" },
+  { type:"playful", emoji:"🙈", text:"Aaj ka mood — sirf 3 emojis mein batao ✨" },
+  { type:"playful", emoji:"🎶", text:"Apna favourite gaana — aur ek line mein ki kyun pasand hai 💿" },
+  { type:"playful", emoji:"🎤", text:"Voice note — bas ek cute sa 'Hello P…' 🤭 (2 sec only)" }
+];
+let resolvedAny = false;
+function buildDares(){
+  const grid = document.getElementById("dgrid");
+  const deck = DARES.slice();
+  /* shuffle — kis card mein kya hai, har baar random */
+  for (let i = deck.length - 1; i > 0; i--){
+    const j = (Math.random() * (i + 1)) | 0;
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+  deck.forEach(d => {
+    const el = document.createElement("div");
+    el.className = "dcard";
+    const front = d.type === "dare"
+      ? `<p>${d.text}</p><div class="dbtns"><button class="dbtn">Okay… banaungi 😏</button><button class="dbtn no">Nahi… 🙈</button></div><span class="d-type">real dare</span>`
+      : `<p>${d.text}</p><span class="d-type">playful wala 😌</span>`;
+    el.innerHTML = `<div class="dcard-in"><div class="dface dback">${d.emoji}<small>tap to flip</small></div><div class="dface dfront">${front}</div></div>`;
+    el.addEventListener("click", () => {
+      el.classList.add("flip");
+      boomAt(window.innerWidth/2 + (Math.random()*140-70), window.innerHeight/2);
+    });
+    if (d.type === "dare"){
+      const [ok, no] = el.querySelectorAll(".dbtn");
+      ok.addEventListener("click", ev => {
+        ev.stopPropagation();
+        document.getElementById("dare-status").innerHTML =
+          "ACCEPT 💜 Jab bhejo — sath me yeh likh dena: <span style='color:#fff;font-style:normal'>&ldquo;Only for you 💜&rdquo;</span> 🤭";
+        resolvedAny = true; emojiBurst();
+      });
+      no.addEventListener("click", ev => {
+        ev.stopPropagation();
+        document.getElementById("dare-status").innerHTML =
+          "Nahi? Koi naa 🫶 Par ek cheez bata do na… <span style='color:#fff;font-style:normal'>wo cheez jo mere ko ab tak nahi pata teri</span> 🤭";
+        resolvedAny = true;
+      });
+    }
+    grid.appendChild(el);
+  });
+}
+
+/* ---------- Surprise → dares ---------- */
+function enterDares(){
+  const d = document.getElementById("daresPage");
+  if (!d.hasChildNodes() || !document.getElementById("dgrid").children.length) buildDares();
+  d.hidden = false;
+  setTimeout(() => d.scrollIntoView({ behavior: "smooth", block: "start" }), 120);
+}
+
+/* ---------- The End finale ---------- */
+let finaleOn = false;
+function theEnd(){
+  if (!resolvedAny){
+    const st = document.getElementById("dare-status");
+    st.innerHTML = "Pehle ek card kholo na 😜";
+    document.querySelector(".dgrid").classList.add("shake");
+    setTimeout(() => document.querySelector(".dgrid").classList.remove("shake"), 600);
+    return;
+  }
+  const f = document.getElementById("finale");
+  if (f.classList.contains("on")) return;
+  f.style.zIndex = "60"; /* boom layers (z 71) fireworks ke upar dikhen */
+  f.classList.add("on"); finaleOn = true;
+  document.body.style.overflow = "hidden";
+  /* fireworks bursts */
+  for (let i = 0; i < 7; i++){
+    setTimeout(() => {
+      boomAt(window.innerWidth * (.15 + Math.random()*.7), window.innerHeight * (.15 + Math.random()*.5));
+    }, 300 + i * 450);
+  }
+  setTimeout(emojiBurst, 900);
+  diyaRain();
+}
+document.getElementById("finale").addEventListener("click", function(){
+  this.classList.remove("on"); this.style.zIndex = ""; document.body.style.overflow = ""; finaleOn = false;
+});
+
+/* ---------- sparks canvas (tiny rising embers) ---------- */
+(function(){
+  const c = document.getElementById("sparks"), ctx = c.getContext("2d");
+  let W, H, parts = [], running = true;
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced) return;
+  function size(){ W = c.width = innerWidth; H = c.height = innerHeight; }
+  size(); addEventListener("resize", size);
+  const COL = ["rgba(167,139,250,", "rgba(240,166,202,", "rgba(246,199,106,", "rgba(255,255,255,"];
+  function spawn(){
+    parts.push({
+      x: Math.random()*W, y: H + 8,
+      r: .6 + Math.random()*1.7,
+      vy: .12 + Math.random()*.5, vx: (Math.random()-.5)*.22,
+      a: .12 + Math.random()*.4, tw: Math.random()*Math.PI*2,
+      col: COL[(Math.random()*COL.length)|0]
+    });
+    if (parts.length > 46) parts.shift();
+  }
+  for (let i = 0; i < 26; i++) { spawn(); parts[parts.length-1].y = Math.random()*H; }
+  document.addEventListener("visibilitychange", () => running = !document.hidden);
+  (function loop(){
+    if (running){
+      ctx.clearRect(0,0,W,H);
+      if (Math.random() < .35) spawn();
+      parts.forEach(p => {
+        p.y -= p.vy; p.x += p.vx; p.tw += .05;
+        const al = p.a * (0.6 + 0.4*Math.sin(p.tw));
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7);
+        ctx.fillStyle = p.col + al + ")"; ctx.fill();
+      });
+      parts = parts.filter(p => p.y > -10);
+    }
+    requestAnimationFrame(loop);
+  })();
+})();
+</script>
+</body>
+</html>
